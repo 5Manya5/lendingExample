@@ -1,0 +1,256 @@
+/* затемняющий слой */
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачная черная подложка */
+  z-index: 1000;
+
+  -webkit-transition: display 0.3s ease-in-out;
+  -o-transition: display 0.3s ease-in-out;
+  transition: display 0.3s ease-in-out;
+}
+ /* стили модального окна */
+.popap{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  
+
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  
+  z-index: 1001;
+
+  -webkit-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+
+.popapInner{
+  -webkit-box-flex: 0.2;
+  -ms-flex-positive: 0.2;
+  flex-grow: 0.2;
+  position: relative;
+
+  height: auto;
+  line-height: 1.65;
+
+  margin: 0 auto;
+  
+  border-radius: 12px;
+  padding: 40px 40px 50px;
+  font-size: 16px;
+  background-color: var(--white-color);
+  color: var(--dark-blue);
+  opacity: 1;
+}
+
+#popapRegistration{
+  padding-top: 60px;
+}
+.popap_titleWrapper{
+  width: 100%;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.titleText{
+  margin: 0 0 40px;
+  text-align: left;
+  font-size: 24px;
+  line-height:1.6;
+}
+.registrationLink{
+  display: inline-block;
+  color: rgb(212, 100, 243);
+  margin-bottom: 20px;
+}
+.form{
+  width: 100%;
+  text-align: left;
+}
+
+.input{
+  width: 100%;
+  padding: 0;
+  padding: 0 0 20px;
+}
+label{
+  display: block;
+  width: 100%;
+}
+.input__inner{
+  width: 100%;  
+  padding: 19px 20px;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  background-color:inherit;
+  outline: none;
+  border: 1px solid var(--dark-blue);
+  border-radius: 6px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--dark-blue);
+}
+input:focus {
+outline: none;
+}
+.inputPass{
+  position: relative;
+  z-index: 5;
+}
+.inputPass__showPass{
+    position: absolute;
+    top: 56%;
+    right: 10px;
+    width: 30px;
+    height: 22px;
+    background: url(https://technopark-kids.ru/public/img/showpass.svg) no-repeat 0 0 transparent;
+    margin-top: -11px;
+    z-index: 15;
+
+    color:white;
+}
+.hide{
+  background: url(https://technopark-kids.ru/public/img/showpass.svg) no-repeat 0 10px transparent;
+}
+.checkbox-wrapper{
+  display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+  margin-bottom: 30px;
+}
+.checkboxContainer{
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  padding-left: 50px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.checkbox{
+  display: none;
+}
+.checkbox__text{
+  display: block;
+  font-size: 20px;
+  outline: none;
+  cursor:pointer;
+  
+  width: 38px;
+  height: 11px;
+  background: #E7E7E7;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.checkbox__text::before{
+  content: "";
+  width: 19px;
+  height: 19px;
+  background: var(--dark-blue);
+  border-radius: 50%;
+
+  position: absolute;
+  top: -4px;
+  left: 0;
+  -webkit-transition: left 0.3s, background 0.3s;
+  -o-transition: left 0.3s, background 0.3s;
+  transition: left 0.3s, background 0.3s;
+}
+.checkbox:checked + .checkbox__text::before{
+  left: 19px;
+  background: #cf8a99;
+}
+.registrationLink{
+  display: inline-block;
+}
+
+.registrationBtn{
+  width: 100%;
+  padding: 18px 30px;
+  border: radius 12px;  
+  
+  background-color: var(--sky-blue);
+  font-size: 20px;
+  color:var(--white-color);
+
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+.registrationBtn:hover,
+.registrationBtn:focus{
+  -webkit-box-shadow: -4px 4px 8px 2px rgb(124, 124, 149);
+  box-shadow: -4px 4px 8px 2px rgb(124, 124, 149);
+}
+
+.closeBtn{
+  padding-top: 0;
+
+  position: absolute;
+  top: 0;
+  right: -60px;
+
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--white-color);
+
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  -webkit-transition: border 1.4s, padding 0.4s;
+  -o-transition: border 1.4s, padding 0.4s;
+  transition: border 1.4s, padding 0.4s;
+}
+
+.closeBtn:hover, 
+.closeBtn:focus{
+  padding: 6px;
+  border:1px solid var(--blue);
+  border-radius:6px;
+}
+
+@media screen and (max-width:800px) {
+  .popapInner{
+    flex-grow: 0.9;
+  }
+  .popap_titleWrapper{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .titleText{
+    margin-bottom: 10px;
+  }
+  .checkbox-wrapper{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .closeBtn{
+    top: 10px;
+    right: 14px;
+    color:var(--icons-color);
+  }
+}

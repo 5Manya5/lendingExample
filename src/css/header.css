@@ -1,0 +1,103 @@
+.header {  
+  background-blend-mode: overlay;
+  background-color: var(--bg-color);
+
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.header .header-wrapper {
+  margin: 0 auto;
+  padding-bottom: 190px;
+  background: no-repeat;
+  background-blend-mode: overlay;
+  background-color: transparent;
+  background-image: url("../../../../img/peopleAndSite.png");
+  background-size: 38%;
+  background-position: right 20% bottom;
+  border-bottom: 1px solid white;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+}
+@media screen and (max-width: 500px) {
+  .header .header-wrapper {
+    background-image: none;
+    padding-bottom: 40px;
+  }
+}
+.header .header-wrapper .header-topButtons {
+  padding-top: 40px;
+  margin-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: var(--icons-color) transparent;
+  cursor: pointer;  
+}
+.header-topButtons>div{  
+  -webkit-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.header-topButtons>div:hover,
+.header-topButtons>div:focus{
+  color: var(--icons-hover-color);
+}
+
+.header .header-wrapper .header-topButtons__toggle {
+  -webkit-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+}
+.header .header-wrapper .header-topButtons__toggle .toggle--blue {
+  display: none;
+  color: var(--dark-blue);
+}
+
+
+
+.header .header-wrapper .header-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .header-wrapper .header-block__content {
+  width: 44%;
+}
+.header .header-wrapper .header-block__content h1 {
+  font: 300 64px/74px "Roboto", "Arial", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .header .header-wrapper .header-block__content h1 {
+    font: 300 40px/50px "Roboto", "Arial", sans-serif;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header .header-wrapper .header-block__content h1 {
+    margin: 0 auto;
+    font: 300 26px/40px "Roboto", "Arial", sans-serif;
+  }
+}
+.header .header-wrapper .header-block__text {
+  margin-top: 30px;
+  margin-bottom: 70px;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+.header .header-wrapper .header-block__btn {
+  display: inline-block;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 56px;
+  color: white;
+  
+}
+.header .header-wrapper .header-block__btn a {
+  color: #FFFFFF;
+}

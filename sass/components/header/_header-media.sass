@@ -1,0 +1,75 @@
+@import "../../common/_mixins"
+
+@include desktop
+    .header
+        padding: 0
+
+        .header-wrapper
+            width: 100%
+            background-position: right 10% bottom 30%
+
+            .header-block
+                &__content
+                    width: 70%
+
+                &__text
+                    width: 60%
+
+@include tablet
+    .header
+
+        .header-wrapper
+            background-position: right bottom 20%
+
+            padding-bottom: 80px
+
+            .header-topButtons
+                margin-bottom: 30px
+
+            .header-block
+
+                &__content
+
+                &__text
+                    width: 80%
+                    font-size: 16px
+                
+                &__btn
+                    padding-left: 40px
+                    padding-right: 40px
+
+@include mobile
+
+    .header
+        background: linear-gradient(0deg, #DAEAF7 8.84%, rgba(152, 195, 232, 0) 31.12%)
+
+        .header-wrapper
+            margin-left: 10px
+            margin-right: 10px
+            background-image: none
+            padding-bottom: 40px
+
+            .header-topButtons
+                margin-bottom: 50px
+
+            .header-block
+
+                &__content
+                    width: 100%
+
+                    text-align: justify
+
+                &__text
+                    width: 100%
+                    padding-top: 12px
+
+                    font: 300 16px/ 26px "Roboto", "Arial", sans-serif
+                &__btn
+                    display: block
+                    margin: 0 auto
+
+                    font-size: 16px
+
+                    padding-left: 20px
+                    padding-right: 20px
+                    height: 40px

@@ -1,0 +1,24 @@
+@import "../../common/_mixins"
+
+@include desktop
+    .container
+        @include padding
+
+@include tablet
+    .btn--scale
+        font-size: 20px
+        color: rgb(0, 0, 0)
+
+    .btn--scale:hover
+        @include noTransform
+
+    h2
+        font-size: 10px
+
+    body
+        font: 300 16px/ 20px "Roboto", "Arial", sans-serif
+
+@include mobile
+
+    body
+        max-width: 376px

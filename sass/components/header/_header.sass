@@ -1,0 +1,91 @@
+
+@import "../../common/_variables"
+
+.header
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(28.39%, #EBF3FB), to(rgba(152, 195, 232, 0.00)))
+    background: -o-linear-gradient(bottom, #EBF3FB 28.39%, rgba(152, 195, 232, 0.00) 100%)
+    background: linear-gradient(0deg, #EBF3FB 28.39%, rgba(152, 195, 232, 0.00) 100%)
+    background-blend-mode: overlay
+    background-color: transparent
+
+    .header-wrapper
+        margin: 0 auto
+        padding-bottom: 190px
+        background-image: url('../../../../img/peopleAndSite.png')
+        background-position: right, bottom, 30%
+        background-repeat: no-repeat
+        background-size: 50%
+        background-blend-mode: overlay
+
+        @include mobile
+            background-image: none
+            padding-bottom: 40px
+
+        // ВЕРХНИЕ КНОПКИ
+
+        .header-topButtons
+            padding-top: 40px
+            margin-bottom: 100px
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-pack: justify
+            -ms-flex-pack: justify
+            justify-content: space-between
+
+            &__toggle
+                margin-left: 0
+                color: $toggle-color
+                cursor: pointer
+
+            &__registration
+                margin-right: 0
+                cursor: pointer
+
+        //  КОНТЕНТ В ШАПКЕ
+
+        .header-block
+            width: 100%
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+
+            &__content
+                width: 44%
+
+                & h1
+                    font: 300 64px/74px "Roboto", "Arial", sans-serif
+
+                    @include tablet
+                        font: 300 40px/50px "Roboto", "Arial", sans-serif
+
+                    @include mobile
+                        margin: 0 auto
+                        font: 300 30px/40px "Roboto", "Arial", sans-serif
+                        letter-spacing: 1.28px
+
+            &__text
+                margin-top: 30px
+                margin-bottom: 70px
+
+                letter-spacing: 0.05em
+                opacity: 0.6
+
+                // КНОПКА СМОТРЕТЬ ПРОЕКТЫ
+
+            &__btn
+                display: inline-block
+                padding-left: 80px
+                padding-right: 80px
+                height: 56px
+
+                background: $button-color
+                color: white
+                -webkit-box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2)
+                box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2)
+
+                border: none
+                border-radius: $radius
+
+                & a
+                    color: $light-link-color

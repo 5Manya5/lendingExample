@@ -1,0 +1,83 @@
+@import "../../common/_variables"
+@import "../../common/_mixins"
+
+footer
+    color: $light-text-color
+    background: $bg-dark-color
+    padding-bottom: 30px
+
+    .footer-topContainer
+        @include container
+
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+
+        &-content
+            margin-bottom: 100px
+            padding-top: 100px
+            width: 40%
+
+            &__title
+                margin-bottom: 30px
+
+                font-size: 36px
+                line-height: 46px
+                letter-spacing: 0.05em
+
+            &__text
+                letter-spacing: 0.05em
+
+                opacity: 0.6
+
+        &__btn
+            padding: 14px 80px
+
+            border: none
+            border-radius: $radius
+            text-align: center
+            letter-spacing: 0.04em
+
+            background: $button-color
+
+    .line
+        border-bottom: 1px solid $light-text-color
+
+        margin-bottom: 30px
+
+    .footer-bottomContainer-menu
+        @include container
+
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-pack: justify
+        -ms-flex-pack: justify
+        justify-content: space-between
+        row-gap: 20px
+        column-gap: 20px
+        flex-wrap: wrap
+
+        margin-bottom: 60px
+        list-style-type: none
+
+        &__listItem_link
+            display: block
+            letter-spacing: 0.05em
+
+            & .listItemText
+                padding-left: 14px
+
+    .footer-bottomContainer__copyright
+        @include container
+        letter-spacing: 0.05em
+        opacity: 0.4
+
+footer *
+        color: $light-text-color

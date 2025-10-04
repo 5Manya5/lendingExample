@@ -1,0 +1,28 @@
+@media screen and (max-width: 1466px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn--scale {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  .btn--scale:hover {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  h2 {
+    font-size: 10px;
+  }
+  body {
+    font: 300 16px/20px "Roboto", "Arial", sans-serif;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    max-width: 376px;
+  }
+}

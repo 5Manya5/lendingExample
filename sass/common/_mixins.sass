@@ -1,0 +1,32 @@
+@import "_variables"
+
+@mixin desktop
+    @media screen and (max-width: $breakpoint_xxl)
+        @content
+
+@mixin tablet
+    @media screen and (max-width: $breakpoint_md)
+        @content
+
+@mixin mobile
+    @media screen and (max-width: $breakpoint_sm)
+        @content
+
+@mixin container
+    max-width: $max-width
+    margin: 0 auto
+
+@mixin font
+    font-size: 1.2rem
+
+@mixin padding
+    padding-left: 30px
+    padding-right: 30px
+
+@mixin noTransform
+
+    -moz-transform: none
+    -webkit-transform: none
+    -o-transform: none
+    -ms-transform: none
+    transform: none

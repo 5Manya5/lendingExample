@@ -1,0 +1,103 @@
+@import "../../common/_mixins"
+
+@include desktop
+
+    .footer-topContainer
+        @include padding
+
+        &-content
+            margin-bottom: 0
+
+    .footer-bottomContainer-menu
+        @include padding
+
+    .footer-bottomContainer__copyright
+        @include padding
+
+@include tablet
+
+    footer
+
+        .footer-topContainer
+
+            &-content
+
+                &__title
+                    @include font
+
+            &__btn
+                padding: 12px 10px
+
+        .footer-bottomConteiner-menu
+            display: block
+            padding-left: 20px
+
+            &__listItem
+                padding-top: 20px
+
+@include mobile
+
+    footer
+
+        .footer-topContainer
+            margin: 0 auto
+            padding: 0 auto
+            margin-bottom: 20px
+
+            -webkit-box-orient: vertical
+            -webkit-box-direction: normal
+            -ms-flex-direction: column
+            flex-direction: column
+            -webkit-box-align: center
+            -ms-flex-align: center
+            align-items: center
+            -webkit-box-pack: center
+            -ms-flex-pack: center
+            justify-content: center
+
+            &-content
+                margin: 0 auto
+                padding-top: 18px
+                margin-bottom: 40px
+                width: 100%
+
+                margin-bottom: 40px
+                padding-left: 10px
+                padding-right: 10px
+
+                &__title
+                    width: 90%
+                    margin: 0 auto
+                    padding-bottom: 20px
+                    font-size: 22px
+                    line-height: 28px
+
+                &__text
+                    width: 100%
+                    text-align: justify
+                    font-size: 16px
+                    line-height: 20px
+
+            &__btn
+                margin: 0 auto
+                margin-bottom: 10px
+                font-size: 16px
+
+        .footer-bottomConteiner-menu
+            display: block
+
+            padding-bottom: 0
+            margin: 0 auto
+            margin-left: 40px
+            margin-bottom: 30px
+
+        .footer-bottomConteiner__copyright
+            margin: 0 auto
+            width: 100%
+            text-align: center
+            padding-bottom: 20px
+            margin-bottom: 20px
+
+            .footer_p
+                width: 100%
+                text-align: center

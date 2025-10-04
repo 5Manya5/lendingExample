@@ -1,0 +1,62 @@
+@import "../../common/_variables"
+@import "../../common/_mixins"
+
+@font-face
+    font-family: "Roboto"
+    src: url("../../../fonts/Roboto-Light.ttf")
+    font-weight: 300
+
+*
+    padding: 0
+    margin: 0
+
+.link-underline
+    position: relative
+    text-decoration: none
+
+.link-underline::after
+    display: block
+    position: absolute
+    left: 0
+    width: 0
+    height: 1px
+    background-color: $link-underline-color
+    content: ""
+    -webkit-transition: width 0.2s
+    -o-transition: width 0.2s
+    transition: width 0.2s
+
+.link-underline:focus::after
+    width: 100%
+
+.link-underline:hover::after
+    width: 100%
+
+.btn--scale
+    transition-duration: 0.5s
+
+.btn--scale:hover
+    -moz-transform: scale(1.2)
+    -webkit-transform: scale(1.2)
+    -o-transform: scale(1.2)
+    -ms-transform: scale(1.2)
+    transform: scale(1.2)
+
+body
+    font: 300 16px/ 24px "Roboto", "Arial", sans-serif
+
+    overflow-x: hidden
+
+    .container
+        @include container
+        color: $dark-text-color
+
+
+        @import "../../common/_reset.sass"
+@import "../header/_header.sass"
+@import "../main/_main.sass"
+@import "../footer/_footer.sass"
+@import "style-media"
+@import "../header/_header-media.sass"
+@import "../main/_main-media.sass"
+@import "../footer/_footer-media.sass"
